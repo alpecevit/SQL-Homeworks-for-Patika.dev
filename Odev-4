@@ -19,4 +19,4 @@ WHERE country LIKE '_____'; -- cevap 13
 -- 5.Soru Cevap --
 SELECT COUNT(DISTINCT city)
 FROM city
-WHERE city ILIKE '%R';
+WHERE city ILIKE '%R'; -- cevap 33
