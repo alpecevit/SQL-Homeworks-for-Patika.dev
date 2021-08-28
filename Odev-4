@@ -1,0 +1,22 @@
+-- 1.Soru Cevap --
+SELECT DISTINCT replacement_cost
+FROM film;
+
+-- 2.Soru Cevap --
+SELECT COUNT(DISTINCT replacement_cost)
+FROM film; -- Cevap 21
+
+-- 3.Soru Cevap --
+SELECT COUNT(DISTINCT title)
+FROM film
+WHERE title like 'T%' AND rating = 'G'; --Cevap 9
+
+-- 4.Soru Cevap --
+SELECT COUNT(DISTINCT country)
+FROM country
+WHERE country LIKE '_____'; -- cevap 13
+
+-- 5.Soru Cevap --
+SELECT COUNT(DISTINCT city)
+FROM city
+WHERE city ILIKE '%R';
