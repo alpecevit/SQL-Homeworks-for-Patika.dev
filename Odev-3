@@ -1,0 +1,19 @@
+-- 1.Soru Cevap --
+SELECT country
+FROM country
+WHERE country LIKE 'A%a';
+
+-- 2.Soru Cevap --
+SELECT country
+FROM country
+WHERE country LIKE '_____%n';
+
+-- 3.Soru Cevap (4 adet t içeren film başlıkları) --
+SELECT title
+FROM film
+WHERE title ~~* '%T%T%T%T%';
+
+-- 4.Soru Cevap --
+SELECT *
+FROM film
+WHERE title LIKE 'T%' AND length > 90 AND rental_rate = 2.99;
