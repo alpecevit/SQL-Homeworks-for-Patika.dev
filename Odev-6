@@ -1,0 +1,18 @@
+-- 1.Soru Cevap --
+SELECT ROUND(AVG(rental_rate),3)
+FROM film; -- Cevap 2.98
+
+-- 2.Soru Cevap --
+SELECT COUNT(DISTINCT title)
+FROM film
+WHERE title LIKE 'C%'; -- Cevap 92
+
+-- 3.Soru Cevap --
+SELECT MAX(length)
+FROM film
+WHERE rental_rate = 0.99; --184 dakika
+
+-- 4.Soru Cevap --
+SELECT COUNT(DISTINCT replacement_cost)
+FROM film
+WHERE length > 150; -- Cevap 21
