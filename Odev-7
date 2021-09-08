@@ -1,0 +1,24 @@
+-- 1.Soru Cevap --
+SELECT rating
+FROM film
+GROUP BY rating;
+
+-- 2.Soru Cevap --
+SELECT replacement_cost, COUNT(title)
+FROM film
+GROUP BY replacement_cost
+HAVING COUNT(title) > 50
+ORDER BY replacement_cost ASC;
+
+-- 3.Soru Cevap --
+SELECT store_id, COUNT(customer_id) AS customers
+FROM customer
+GROUP BY store_id
+ORDER BY COUNT(customer_id) DESC;
+
+-- 4.Soru Cevap --
+SELECT country_id, COUNT(city) as city_count
+FROM city
+GROUP BY country_id
+ORDER BY COUNT(city) DESC
+LIMIT 1; -- country_id = 44, city_count = 60
