@@ -1,0 +1,22 @@
+-- 1.Soru Cevap --
+--CREATE TABLE employee (
+--	id INT,
+--	name VARCHAR(50) NOT NULL,
+--	birthday DATE,
+--	email VARCHAR(100));
+
+-- 2.Soru Cevap--
+SELECT *
+FROM employee;
+
+-- 3.Soru Cevap --
+UPDATE employee
+SET name = 'John',
+	email = 'john@gmail.com'
+WHERE id = 4
+RETURNING *;
+
+-- 4.Soru Cevap --
+DELETE FROM employee
+WHERE id = 14
+RETURNING *;
