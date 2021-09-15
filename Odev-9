@@ -1,0 +1,14 @@
+-- 1.Soru Cevap --
+SELECT city.city, country.country
+FROM country
+INNER JOIN city ON country.country_id = city.country_id;
+
+-- 2.Soru Cevap --
+SELECT payment.payment_id, customer.first_name, customer.last_name
+FROM payment
+INNER JOIN customer ON payment.customer_id = customer.customer_id;
+
+-- 3.Soru Cevap --
+SELECT rental.rental_id, customer.first_name, customer.last_name
+FROM rental
+INNER JOIN customer ON customer.customer_id = rental.customer_id;
