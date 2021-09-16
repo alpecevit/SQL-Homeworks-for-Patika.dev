@@ -1,0 +1,29 @@
+-- 1.Soru Cevap --
+SELECT COUNT(title)
+FROM film
+WHERE length >
+(
+	SELECT AVG(film.length)
+	FROM film
+); -- CEVAP 489
+
+-- 2.Soru Cevap --
+SELECT COUNT(title)
+FROM film
+WHERE length = 
+(
+	SELECT MAX(length)
+	FROM film
+); -- Cevap 10
+
+-- 3.Soru Cevap --
+SELECT title
+FROM film
+WHERE replacement_cost = 9.99 AND rental_rate = 0.99;
+
+-- 4.Soru Cevap --
+SELECT customer_id, COUNT(amount)
+FROM payment
+GROUP BY customer_id
+ORDER BY COUNT(amount) DESC
+LIMIT 10;
